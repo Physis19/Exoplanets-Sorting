@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 dados = pd.read_csv('exoplanets_new.csv', usecols=[6])
 array_dados = dados.values
