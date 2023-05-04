@@ -38,4 +38,7 @@ def bucket_sort(array):
 
     return sortedBuckets
 
-print(bucket_sort(lista_tuplas))
+planetsOrdered = bucket_sort(lista_tuplas)
+
+planets = pd.DataFrame(planetsOrdered, columns=['Exoplanet Name', 'Discovered Year'])
+planets.to_csv('Ordered_data_bucket.csv', index=False)
