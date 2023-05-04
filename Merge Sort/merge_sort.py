@@ -29,12 +29,8 @@ def merge(lista, inicio, meio, fim, key):
             lista[k] = right[top_right]
             top_right += 1
 
-
 dados = pd.read_csv('exoplanets_new.csv')
 dados_colunas = dados.loc[:, ['pl_name', 'disc_year']]
-lista_tuplas = list(zip(dados_colunas['pl_name'], dados_colunas['disc_year']))
+lista_dados = list(zip(dados_colunas['pl_name'], dados_colunas['disc_year']))
 
-mergesort(lista_tuplas, key=lambda x: x[1])
-
-'''for elemento in lista_tuplas:
-    print(f'ANO: {elemento[1]} ---> Planeta: {elemento[0]}')'''
+mergesort(lista_dados, key=lambda x: x[1])
